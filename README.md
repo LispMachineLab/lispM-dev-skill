@@ -4,6 +4,8 @@ A reusable development skill for LispM apps, Agent, shared libraries, and Deskto
 
 The repository name is `lispM-dev-skill`; the skill identifier is `lispm-dev-skill`.
 
+The [repository map](references/repositories.md) covers all **29 public LispMachineLab repositories** verified on 2026-10-30: 3 core/distribution repositories, 7 shared libraries/runtimes, 14 apps/extensions, and 5 documentation, development, or historical repositories. Each development entry identifies its responsibility, dependency boundary, and source starting point. A change-routing table shows which related repositories to inspect together.
+
 ## Use
 
 Point a skill-capable coding agent at [SKILL.md](SKILL.md), or explicitly ask it to follow that file while developing or reviewing a LispM change. Keep the `references/` directory alongside it. For example:
@@ -15,6 +17,7 @@ If you choose to install it in an agent's skill directory, use `lispm-dev-skill`
 ## Contents
 
 - [SKILL.md](SKILL.md): ownership, host contracts, API reuse, lifecycle, migrations, and validation.
+- [Repository map](references/repositories.md): the complete organization inventory, app dependencies, source entrypoints, and cross-repository routing.
 - [Library map](references/libraries.md): where shared mechanisms belong and how the runtimes differ.
 - [Boundary examples](references/boundaries.md): public contracts, counterexamples, and pinned source evidence.
 - [LICENSE](LICENSE): GNU Affero General Public License, version 3 or later, following LispM's library convention.

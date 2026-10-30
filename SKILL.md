@@ -8,6 +8,21 @@ license: AGPL-3.0-or-later
 
 Every LispM app must work in ordinary Emacs without LispM Desktop, with its legitimate declared domain dependencies and supported capabilities. An Agent plugin may require Agent; native graphics may require a supported Emacs build. Neither permits a Desktop dependency. Desktop's hidden-host “standalone applications” feature does not establish this independence.
 
+## Repository scope
+
+Use the [complete repository map](references/repositories.md) to locate owners, dependencies, public source entrypoints, and related consumers before choosing where a change belongs. The map covers all 29 public organization repositories verified on 2026-10-30:
+
+| Area | Repositories |
+| --- | --- |
+| Core and distribution | `lispm-agent`, `lispm-desktop`, `lispm-store` |
+| Shared libraries and runtimes | `lispm-kit`, `lispm-ui`, `lispm-prebuilt`, `lispm-kernel`, `lispm-security`, `lispm-gl`, `emacs-cl` |
+| Applications | `lispm-1password`, `lispm-browser`, `lispm-comfyui`, `lispm-doom`, `lispm-mail`, `lispm-mycin`, `lispm-remote`, `lispm-rotom`, `lispm-shrdlu`, `lispm-stickies` |
+| Agent extensions and renderer | `lispm-hermes`, `lispm-holon`, `lispm-openclaw`, `lispm-office` |
+| Documentation and development | `LispMachineLab.github.io`, `.github`, `lispM-dev-skill` |
+| Archived or historical sources | `lispm-eseq`, `www-shrdlu` |
+
+Select the relevant rows and inspect those repositories; listing the whole ecosystem does not require auditing it for each task. Use the map's change-routing table when a feature crosses repositories. Recheck the organization inventory when maintaining this index or when the requested component is absent.
+
 ## Decide ownership before implementation
 
 Identify the behavior's owner, the public API involved, and the affected consumers before editing. Inspect current source, package headers, actual `require` and call sites, extension points, and relevant tests. Repository descriptions and installed checkouts can lag source. Investigate the affected dependency path; a small app change does not require auditing every repository.
