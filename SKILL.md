@@ -10,12 +10,12 @@ Every LispM app must work in ordinary Emacs without LispM Desktop, with its legi
 
 ## Repository scope
 
-Use the [complete repository map](references/repositories.md) to locate owners, dependencies, public source entrypoints, and related consumers before choosing where a change belongs. The map covers all 29 public organization repositories verified on 2026-10-30:
+Use the [complete repository map](references/repositories.md) to locate owners, dependencies, public source entrypoints, and related consumers before choosing where a change belongs. The map covers all 30 public organization repositories verified on 2026-11-05:
 
 | Area | Repositories |
 | --- | --- |
 | Core and distribution | `lispm-agent`, `lispm-desktop`, `lispm-store` |
-| Shared libraries and runtimes | `lispm-kit`, `lispm-ui`, `lispm-prebuilt`, `lispm-kernel`, `lispm-security`, `lispm-gl`, `emacs-cl` |
+| Shared libraries and runtimes | `lispm-kit`, `lispm-ui`, `lispm-auth`, `lispm-prebuilt`, `lispm-kernel`, `lispm-security`, `lispm-gl`, `emacs-cl` |
 | Applications | `lispm-1password`, `lispm-browser`, `lispm-comfyui`, `lispm-doom`, `lispm-mail`, `lispm-mycin`, `lispm-remote`, `lispm-rotom`, `lispm-shrdlu`, `lispm-stickies` |
 | Agent extensions and renderer | `lispm-hermes`, `lispm-holon`, `lispm-openclaw`, `lispm-office` |
 | Documentation and development | `LispMachineLab.github.io`, `.github`, `lispM-dev-skill` |
@@ -50,7 +50,7 @@ For concrete host contracts and boundary mistakes, read [boundary patterns](refe
 
 ## Reuse the appropriate library
 
-Use **lispm-kit** for command metadata and i18n; **lispm-ui** for common controls, forms, dialogs, and rendering; **lispm-prebuilt** for native artifact lifecycle; **lispm-kernel** for background work; **lispm-security** for inspection and policy mechanisms; **lispm-gl** for supported GPU canvases; and **emacs-cl** for its Common Lisp runtime. The correct name is **prebuilt**, not prebuild.
+Use **lispm-kit** for command metadata and i18n; **lispm-ui** for common controls, forms, dialogs, tabs, fields, and rendering; **lispm-auth** for password-encrypted secret storage and per-app startup password declarations; **lispm-prebuilt** for native artifact lifecycle; **lispm-kernel** for background work; **lispm-security** for inspection and policy mechanisms; **lispm-gl** for supported GPU canvases; and **emacs-cl** for its Common Lisp runtime. The correct name is **prebuilt**, not prebuild.
 
 Read the relevant entry in the [library map](references/libraries.md), then inspect the current public API and consumers. Do not add every library as a dependency or turn Kit, UI, or Agent into a miscellaneous utility package.
 
